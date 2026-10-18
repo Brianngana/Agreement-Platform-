@@ -466,7 +466,7 @@ function legalScreen(key) {
   const [title, sections] = LEGAL[key];
   return `<div class="panel legal"><h2>${title}</h2><p class="hint" style="margin:-6px 0 4px;">Last updated: 28 September 2026</p>` +
     sections.map(([hd, t]) => `<h3>${hd}</h3><p>${t}</p>`).join('') +
-    `<p class="hint">This is a working draft for the prototype and should be reviewed by a qualified Kenyan lawyer before launch.</p></div>`;
+    `<p class="hint">The best Agrrement Platform.</p></div>`;
 }
 
 const state = { typeId: null, answers: {}, stepPos: 0, status: 'none', code: null, events: [], view: 'home',
@@ -526,7 +526,7 @@ const agreementTypes = {
   partnership: { name: 'Business partnership',
     steps: [
       { id: 'partner_a', label: 'Who is the first partner?', type: 'text', ph: 'e.g. Alex Kinyua' },
-      { id: 'partner_b', label: 'Who is the second partner?', type: 'text', ph: 'e.g. Grace Wanjiru' },
+      { id: 'partner_b', label: 'Who is the second partner?', type: 'text', ph: 'e.g. Brian Ngana' },
       { id: 'contribution_a', label: 'How much is the first partner contributing? (KSh)', type: 'number', ph: '200000' },
       { id: 'contribution_b', label: 'How much is the second partner contributing? (KSh)', type: 'number', ph: '200000' },
       { id: 'profit_split', label: 'How will profits be split?', type: 'choice',
@@ -580,7 +580,7 @@ const agreementTypes = {
   employment: { name: 'Employment agreement',
     steps: [
       { id: 'employer', label: 'Who is the employer?', type: 'text', ph: 'e.g. Savanna Foods Ltd' },
-      { id: 'employee', label: 'Who is the employee?', type: 'text', ph: 'e.g. John Mwangi' },
+      { id: 'employee', label: 'Who is the employee?', type: 'text', ph: 'e.g. Brian Ngana' },
       { id: 'job_title', label: 'What is the job title?', type: 'text', ph: 'e.g. Sales associate' },
       { id: 'salary_amount', label: 'What is the monthly salary? (KSh)', type: 'number', ph: '45000' },
       { id: 'start_date', label: 'When does employment start?', type: 'date' },
