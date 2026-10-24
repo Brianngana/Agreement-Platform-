@@ -466,7 +466,7 @@ function legalScreen(key) {
   const [title, sections] = LEGAL[key];
   return `<div class="panel legal"><h2>${title}</h2><p class="hint" style="margin:-6px 0 4px;">Last updated: 28 September 2026</p>` +
     sections.map(([hd, t]) => `<h3>${hd}</h3><p>${t}</p>`).join('') +
-    `<p class="hint">This is a working draft for the prototype and should be reviewed by a qualified Kenyan lawyer before launch.</p></div>`;
+    `<p class="hint">The best Agreement Platform.</p></div>`;
 }
 
 const state = { typeId: null, answers: {}, stepPos: 0, status: 'none', code: null, events: [], view: 'home',
@@ -480,8 +480,8 @@ function money(n) { return 'KSh ' + Number(n || 0).toLocaleString(); }
 const agreementTypes = {
   loan: { name: 'Loan agreement',
     steps: [
-      { id: 'lender', label: 'Who is lending the money?', type: 'text', ph: 'e.g. Alex Kinyua' },
-      { id: 'borrower', label: 'Who is borrowing?', type: 'text', ph: 'e.g. John Mwangi' },
+      { id: 'lender', label: 'Who is lending the money?', type: 'text', ph: 'e.g. Brian Ngana' },
+      { id: 'borrower', label: 'Who is borrowing?', type: 'text', ph: 'e.g. Wambui' },
       { id: 'principal_amount', label: 'How much is being lent? (KSh)', type: 'number', ph: '100000' },
       { id: 'has_interest', label: 'Will there be interest?', type: 'choice', options: [['no','No'],['yes','Yes']] },
       { id: 'interest_rate', label: "What's the interest rate? (% per annum)", type: 'number', ph: '5', depends: ['has_interest','yes'] },
@@ -553,7 +553,7 @@ const agreementTypes = {
   },
   service: { name: 'Service agreement',
     steps: [
-      { id: 'provider', label: 'Who is providing the service?', type: 'text', ph: 'e.g. CleanPro Ltd' },
+      { id: 'provider', label: 'Who is providing the service?', type: 'text', ph: 'e.g. Ngana Rocha web solutions' },
       { id: 'recipient', label: 'Who is receiving the service?', type: 'text', ph: 'e.g. Grace Wanjiru' },
       { id: 'service_description', label: 'Describe the service.', type: 'text', ph: 'e.g. Weekly office cleaning' },
       { id: 'service_fee', label: 'What is the fee? (KSh)', type: 'number', ph: '15000' },
@@ -580,7 +580,7 @@ const agreementTypes = {
   employment: { name: 'Employment agreement',
     steps: [
       { id: 'employer', label: 'Who is the employer?', type: 'text', ph: 'e.g. Savanna Foods Ltd' },
-      { id: 'employee', label: 'Who is the employee?', type: 'text', ph: 'e.g. John Mwangi' },
+      { id: 'employee', label: 'Who is the employee?', type: 'text', ph: 'e.g. Elizabeth' },
       { id: 'job_title', label: 'What is the job title?', type: 'text', ph: 'e.g. Sales associate' },
       { id: 'salary_amount', label: 'What is the monthly salary? (KSh)', type: 'number', ph: '45000' },
       { id: 'start_date', label: 'When does employment start?', type: 'date' },
